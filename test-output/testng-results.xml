@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="36" started-at="2017-06-20T03:14:57Z" finished-at="2017-06-20T03:14:57Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="36" started-at="2017-06-20T03:14:57Z" finished-at="2017-06-20T03:14:57Z">
+      <class name="xiaqiu.TestOrder">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:xiaqiu.TestOrder@1bc6a36e]" name="beforeClass" is-config="true" duration-ms="11" started-at="2017-06-20T11:14:57Z" finished-at="2017-06-20T11:14:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="f1()[pri:0, instance:xiaqiu.TestOrder@1bc6a36e]" name="f1" duration-ms="8" started-at="2017-06-20T11:14:57Z" finished-at="2017-06-20T11:14:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f1 -->
+        <test-method status="PASS" signature="f2()[pri:0, instance:xiaqiu.TestOrder@1bc6a36e]" name="f2" duration-ms="1" started-at="2017-06-20T11:14:57Z" finished-at="2017-06-20T11:14:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2 -->
+      </class> <!-- xiaqiu.TestOrder -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
