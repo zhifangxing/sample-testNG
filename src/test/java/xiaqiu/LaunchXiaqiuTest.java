@@ -56,13 +56,10 @@ public class LaunchXiaqiuTest {
 
 	
 	@Test
-	public void test_case_1() throws Exception{
+	public void login_test() throws Exception{
 		
 //      登录页面
 		 System.err.println("------------#1 login test-------------------");
-//		 switchToNative(driver).elementById("et_phone").sendKeys("15811495608"); //转向native页面并定位，该句不好使
-//		 switchToNative(driver).elementById("et_pwd").sendKeys("111111");
-//		 switchToNative(driver).elementsByClassName("android.widget.EditText").getIndex(1).sendKeys("111111");
 		 ElementSelector selector = driver.elementsByClassName("android.widget.EditText");
 		 //input username and pwd
 		 selector.getIndex(0).sendKeys("15811495608");
@@ -75,29 +72,19 @@ public class LaunchXiaqiuTest {
 		 
 	}
 	@Test
-	public void test_case_2() throws Exception{
+	public void indexPage_test() throws Exception{
 		
 		System.err.println("------------#2 indexPage test-------------------");
 		ElementSelector selector = driver.elementsByClassName("android.widget.Button");
-//		Assert.assertEquals(driver.elementByCss(selector.getIndex(0).toString()), "开始借款");
-//		Element borrowBtn = driver.elementByXPath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.RelativeLayout[1]/android.support.v4.view.ViewPager[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[15]/android.view.View[1]/android.widget.Button[1]");
-//		if (borrowBtn.isDisplayed()) {
-//			borrowBtn.click();
-//		}else {
-//			System.err.println("开始借款按钮未找到");
-//			driver.sleep(5000);
-//			}
-		 driver.elementByXPath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.RelativeLayout[1]/android.support.v4.view.ViewPager[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[15]/android.view.View[1]/android.widget.Button[1]").click();
-		 driver.sleep(5000);
+		driver.elementByXPath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.RelativeLayout[1]/android.support.v4.view.ViewPager[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[15]/android.view.View[1]/android.widget.Button[1]").click();
+		driver.sleep(5000);
 		
 	}
 	
 	@Test
-	public void test_case_3() throws Exception{
+	public void baseInfo_test() throws Exception{
 		System.err.println("------------#3 basicInfo test-------------------");
-        
 	    driver.sleep(10000);
-	    
 //	    定位到真实姓名输入框
 	    ElementSelector selector = driver.elementsByClassName("android.widget.EditText");
 	    String username = "邢志芳";
@@ -112,38 +99,7 @@ public class LaunchXiaqiuTest {
 	    selector = driver.elementsByClassName("android.view.View");
 	    driver.elementByXPath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[5]/android.view.View[2]")
 	    .click();
-//	    System.err.println("------------进入身份证上传页面-------------------");
-//	    selector = driver.elementsByClassName("android.widget.ImageView");
-//	    Element textFront = driver.elementByXPath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]");
-//	    if (textFront.isDisplayed()) {
-//	    	System.err.println("------------确认已经进入身份证上传页面-------------------");
-//		} else {
-//			driver.sleep(3000);
-//		}
-//	    System.err.println("------------上传身份证正面照片-------------------");
 	    driver.sleep(3000);
-//	    selector = driver.elementsByClassName("android.widget.ImageView");
-//	    定位到上传身份证正面框处并点击出现选择照片方式：拍照、相册、取消三种
-//	    for (int i = 0; i < selector.size()-1; i++) {
-//			System.err.println(selector.getIndex(i));
-//		}
-//	    selector.getIndex(0).click();//返回了上个页面，推测是左上角按钮
-//	    selector.getIndex(1).click();//点击了正面照片框
-//	    driver.elementByXPath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.ImageView[1]").click();
-//	    选择相册
-//	    selector = driver.elementsByClassName("android.widget.LinearLayout");
-//	    for (int i = 0; i < selector.size()-1; i++) {
-//	    	System.err.println(selector.getIndex(i));
-//	    }
-//	    selector.getIndex(2).click();
-//	    driver.elementByXPath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.ImageView[2]").click();
-//	    driver.elementByXPath("//android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[2]").click();
-	        
-	        
-//	    进入手机相册
-//	    selector = driver.elementsByClassName("android.view.View");
-//	    System.err.println(selector.size());
-//	    selector.getIndex(1).click();
 	        
 //	    定位到活体验证字段
 	    driver.elementByXPath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[6]/android.view.View[2]")
@@ -157,6 +113,114 @@ public class LaunchXiaqiuTest {
 	    selector =  driver.elementsByClassName("android.widget.Button");
 	    driver.elementByXPath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[10]/android.widget.Button[1]")
 	    .click();
+	}
+	
+	public void bankInfo_test() throws Exception{
+
+//		进入银行卡信息页面
+        System.err.println("------------#4 bankinfo test-------------------");
+        ElementSelector selector = driver.elementsByClassName("android.view.View");
+        driver.elementByXPath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[4]")
+        .click();
+        
+//        出现银行选择框
+        selector = driver.elementsByClassName("android.widget.LinearLayout");
+//        选择民生银行
+        driver.elementByXPath("//android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[6]")
+        .click();
+//        准备输入银行卡号
+        selector = driver.elementsByClassName("android.widget.EditText");
+        String bankNum = "6226220128734836"; 
+        driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[5]/android.widget.EditText[1]")
+        .sendKeys(bankNum);
+//        准备输入手机号
+        String phoneNum = "15811495608";
+        driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[6]/android.widget.EditText[1]")
+		.sendKeys(phoneNum);
+//        上传银行卡照片
+        selector = driver.elementsByClassName("android.view.View");
+        driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[8]")
+        .click();
+//        下一步按钮高亮，点击进入完善信息页面
+        selector = driver.elementsByClassName("android.widget.Button");
+        driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[13]/")
+        .click();
+	}
+	
+	public void ReqExtendInfo_test() throws Exception{
+		
+
+//		进入完善信息页面
+        System.err.println("------------#4 reqExtendInfo test-------------------");
+//        定位到住房状况
+        ElementSelector selector = driver.elementsByClassName("android.view.View");
+       driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[2]")
+       .click();
+//       选择租房状况，租房
+       selector = driver.elementsByClassName("android.widget.TextView");
+       driver.elementByXPath("//android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]")
+       .click();
+//       定位到住宅地址
+       selector = driver.elementsByClassName("android.view.view");
+       driver.elementByXPath(" //android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[3]")
+       .click();
+//       选择城市北京  北京市  朝阳
+       selector = driver.elementsByClassName("android.widget.TextView");
+       driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.support.v4.view.ViewPager[1]/android.widget.FrameLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.TextView[3]")
+       .click();
+       driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.support.v4.view.ViewPager[1]/android.widget.FrameLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.TextView[1]")
+       .click();
+       driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.support.v4.view.ViewPager[1]/android.widget.FrameLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.TextView[2]")
+       .click();
+//      定位住宅的详细地址
+       selector = driver.elementsByClassName("android.widget.EditText"); 
+       String houseAddress = "八里庄北里1号院";
+       driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.widget.EditText[1]")
+       .sendKeys(houseAddress);
+//       定位职业信息--单位名称
+       driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[5]/android.widget.EditText[1]")
+       .sendKeys("百融金服");
+//       定位到职业信息--单位地址
+       selector = driver.elementsByClassName("android.view.view");
+       driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[6]")
+       .click();
+//       选择单位地址：北京 北京市 朝阳区
+       selector = driver.elementsByClassName("android.widget.TextView");
+       driver.elementByXPath(" //android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.support.v4.view.ViewPager[1]/android.widget.FrameLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.TextView[3]")
+       .click();
+       driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.support.v4.view.ViewPager[1]/android.widget.FrameLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.TextView[1]")
+       .click();
+       driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.support.v4.view.ViewPager[1]/android.widget.FrameLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.TextView[2]")
+       .click();
+       selector = driver.elementsByClassName("android.widget.EditText"); 
+       String companyAddress = "中关村南三街";
+       driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.widget.EditText[2]")
+       .sendKeys(companyAddress);
+//       定位到单位电话
+       driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[7]/android.widget.EditText[1]")
+       .sendKeys("010");
+       driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[7]/android.widget.EditText[2]")
+       .sendKeys("12345678");
+//       定位到紧急联系人
+       String name = "小丁";
+       driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[9]/android.widget.EditText[1]")
+       .sendKeys(name);
+       String namePhoneNum = "13501322044";
+       driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[10]/android.widget.EditText[1]")
+       .sendKeys(namePhoneNum);
+//       定位到关系
+       selector = driver.elementsByClassName("android.view.view");
+       driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[11]")
+       .click();
+//       选择兄弟姐妹
+       selector = driver.elementsByClassName("android.widget.TextView");
+       driver.elementByXPath("//android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[3]/android.widget.TextView[1]")
+       .click();
+//       下一步按钮高亮
+       selector = driver.elementsByClassName("android.widget.Button");
+       driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[15]/android.widget.Button[1]")
+       .click();
+       
 	}
 
 	

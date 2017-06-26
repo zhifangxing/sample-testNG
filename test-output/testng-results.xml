@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="36" started-at="2017-06-20T03:14:57Z" finished-at="2017-06-20T03:14:57Z">
+  <suite name="1.4.6 version_test_resport " duration-ms="50727" started-at="2017-06-26T11:00:24Z" finished-at="2017-06-26T11:01:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="36" started-at="2017-06-20T03:14:57Z" finished-at="2017-06-20T03:14:57Z">
-      <class name="xiaqiu.TestOrder">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:xiaqiu.TestOrder@1bc6a36e]" name="beforeClass" is-config="true" duration-ms="11" started-at="2017-06-20T11:14:57Z" finished-at="2017-06-20T11:14:57Z">
+    <test name="启动app" duration-ms="50727" started-at="2017-06-26T11:00:24Z" finished-at="2017-06-26T11:01:14Z">
+      <class name="xiaqiu.LaunchXiaqiuTest">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:xiaqiu.LaunchXiaqiuTest@1d371b2d]" name="setUpBeforeClass" is-config="true" duration-ms="29963" started-at="2017-06-26T19:00:24Z" finished-at="2017-06-26T19:00:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="f1()[pri:0, instance:xiaqiu.TestOrder@1bc6a36e]" name="f1" duration-ms="8" started-at="2017-06-20T11:14:57Z" finished-at="2017-06-20T11:14:57Z">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method status="PASS" signature="login_test()[pri:0, instance:xiaqiu.LaunchXiaqiuTest@1d371b2d]" name="login_test" duration-ms="20196" started-at="2017-06-26T19:00:54Z" finished-at="2017-06-26T19:01:14Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f1 -->
-        <test-method status="PASS" signature="f2()[pri:0, instance:xiaqiu.TestOrder@1bc6a36e]" name="f2" duration-ms="1" started-at="2017-06-20T11:14:57Z" finished-at="2017-06-20T11:14:57Z">
+        </test-method> <!-- login_test -->
+        <test-method status="PASS" signature="tearDownAfterClass()[pri:0, instance:xiaqiu.LaunchXiaqiuTest@1d371b2d]" name="tearDownAfterClass" is-config="true" duration-ms="555" started-at="2017-06-26T19:01:14Z" finished-at="2017-06-26T19:01:14Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f2 -->
-      </class> <!-- xiaqiu.TestOrder -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- tearDownAfterClass -->
+      </class> <!-- xiaqiu.LaunchXiaqiuTest -->
+    </test> <!-- 启动app -->
+  </suite> <!-- 1.4.6 version_test_resport  -->
 </testng-results>

@@ -3,11 +3,59 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
+      <class name="macaca.client.AndroidSampleTest">
+        <methods>
+          <include name="test_case_1"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- macaca.client.AndroidSampleTest -->
+      <class name="macaca.client.DesktopSampleTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="test_case_2"/>
+          <include name="tearDown"/>
+          <include name="test_case_1"/>
+        </methods>
+      </class> <!-- macaca.client.DesktopSampleTest -->
+      <class name="macaca.client.H5SampleTest">
+        <methods>
+          <include name="test_case_1"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- macaca.client.H5SampleTest -->
+      <class name="macaca.client.IosSampleTest">
+        <methods>
+          <include name="test_case_1"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- macaca.client.IosSampleTest -->
+      <class name="xiaqiu.BankInfoTest">
+        <methods>
+          <include name="setUpBeforeClass"/>
+          <include name="test1"/>
+        </methods>
+      </class> <!-- xiaqiu.BankInfoTest -->
+      <class name="xiaqiu.ReqExtendInfoTest">
+        <methods>
+          <include name="test"/>
+          <include name="setUpBeforeClass"/>
+        </methods>
+      </class> <!-- xiaqiu.ReqExtendInfoTest -->
+      <class name="xiaqiu.BaseInfoTest">
+        <methods>
+          <include name="test"/>
+          <include name="setUpBeforeClass"/>
+        </methods>
+      </class> <!-- xiaqiu.BaseInfoTest -->
       <class name="xiaqiu.LaunchXiaqiuTest">
         <methods>
-          <include name="test_case_2"/>
+          <include name="indexPage_test"/>
           <include name="setUpBeforeClass"/>
           <include name="tearDownAfterClass"/>
+          <include name="baseInfo_test"/>
         </methods>
       </class> <!-- xiaqiu.LaunchXiaqiuTest -->
     </classes>

@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [1.4.6 version_test_resport ]" parallel="tests">
+  <test name="启动app(failed)" parallel="tests">
     <classes>
       <class name="xiaqiu.LaunchXiaqiuTest">
         <methods>
-          <include name="test_case_2"/>
+          <include name="login_test"/>
           <include name="setUpBeforeClass"/>
-          <include name="tearDownAfterClass"/>
         </methods>
       </class> <!-- xiaqiu.LaunchXiaqiuTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- 启动app(failed) -->
+</suite> <!-- Failed suite [1.4.6 version_test_resport ] -->

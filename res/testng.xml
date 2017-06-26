@@ -1,29 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="1.4.6版本测试报告" parallel="tests" preserve-order="true">
-    <test name="启动app">
-        <!-- <groups>
-            <define name = "all">
-                <include name = "启动"></include>
-            </define>
-            <run>
-                <includename="all"></includename>
-            </run>
-        </groups> -->
+<suite name="1.4.6 version_test_resport " parallel="tests" preserve-order="true">
+    <test name="启动app" preserve-order="true">
         <classes>
-            <class name="LaunchXiaqiuTest" />
+            <class name="xiaqiu.LaunchXiaqiuTest" />
             <methods>
-                <include name="test_case_1"></include>
-                <exclude name="test_case_2"></exclude>
+                <include name="login_test"></include>
+                <exclude name="indexPage_test"></exclude>
             </methods>
         </classes>
     </test>
-
-    <!-- <test name="基本信息页面">
-            <parameter name="port" value="3457" />
-            <parameter name="udid" value="192.168.88.102:5555" />
-        <classes>
-            <class name="BaseInfoTest" />
-        </classes>
-    </test> -->
 </suite>
