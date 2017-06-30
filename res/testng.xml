@@ -6,7 +6,10 @@
             <class name="xiaqiu.LaunchXiaqiuTest" />
             <methods>
                 <include name="login_test"></include>
-                <exclude name="indexPage_test"></exclude>
+                <include name="indexPage_test"></include>
+                <include name="baseInfo_test"></include>
+                <!-- <include name="bankInfo_test"></include> -->
+               
             </methods>
         </classes>
     </test>

@@ -1,0 +1,13 @@
+2017/06/23 17:44:43
+执行用例耗时：29.931s
+PASSED: login_test
+FAILED: baseInfo_test
+FAILED: indexPage_test
+===============================================
+    Default test
+    Tests run: 3, Failures: 2, Skips: 0
+===============================================
+===============================================
+Default suite
+Total tests run: 3, Failures: 2, Skips: 0
+===============================================

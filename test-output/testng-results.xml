@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="1.4.6 version_test_resport " duration-ms="50727" started-at="2017-06-26T11:00:24Z" finished-at="2017-06-26T11:01:14Z">
+  <suite name="1.4.6 version_test_resport " duration-ms="144454" started-at="2017-06-30T09:33:21Z" finished-at="2017-06-30T09:35:46Z">
     <groups>
     </groups>
-    <test name="启动app" duration-ms="50727" started-at="2017-06-26T11:00:24Z" finished-at="2017-06-26T11:01:14Z">
+    <test name="启动app" duration-ms="144454" started-at="2017-06-30T09:33:21Z" finished-at="2017-06-30T09:35:46Z">
       <class name="xiaqiu.LaunchXiaqiuTest">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:xiaqiu.LaunchXiaqiuTest@1d371b2d]" name="setUpBeforeClass" is-config="true" duration-ms="29963" started-at="2017-06-26T19:00:24Z" finished-at="2017-06-26T19:00:54Z">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:xiaqiu.LaunchXiaqiuTest@32eebfca]" name="setUpBeforeClass" is-config="true" duration-ms="62757" started-at="2017-06-30T17:33:21Z" finished-at="2017-06-30T17:34:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="login_test()[pri:0, instance:xiaqiu.LaunchXiaqiuTest@1d371b2d]" name="login_test" duration-ms="20196" started-at="2017-06-26T19:00:54Z" finished-at="2017-06-26T19:01:14Z">
+        <test-method status="PASS" signature="login_test()[pri:0, instance:xiaqiu.LaunchXiaqiuTest@32eebfca]" name="login_test" duration-ms="11616" started-at="2017-06-30T17:34:24Z" finished-at="2017-06-30T17:34:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login_test -->
-        <test-method status="PASS" signature="tearDownAfterClass()[pri:0, instance:xiaqiu.LaunchXiaqiuTest@1d371b2d]" name="tearDownAfterClass" is-config="true" duration-ms="555" started-at="2017-06-26T19:01:14Z" finished-at="2017-06-26T19:01:14Z">
+        <test-method status="PASS" signature="indexPage_test()[pri:0, instance:xiaqiu.LaunchXiaqiuTest@32eebfca]" name="indexPage_test" duration-ms="26591" started-at="2017-06-30T17:34:36Z" finished-at="2017-06-30T17:35:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- indexPage_test -->
+        <test-method status="PASS" signature="baseInfo_test()[pri:0, instance:xiaqiu.LaunchXiaqiuTest@32eebfca]" name="baseInfo_test" duration-ms="43454" started-at="2017-06-30T17:35:02Z" finished-at="2017-06-30T17:35:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- baseInfo_test -->
+        <test-method status="PASS" signature="tearDownAfterClass()[pri:0, instance:xiaqiu.LaunchXiaqiuTest@32eebfca]" name="tearDownAfterClass" is-config="true" duration-ms="20" started-at="2017-06-30T17:35:46Z" finished-at="2017-06-30T17:35:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterClass -->

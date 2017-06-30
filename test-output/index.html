@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -99,6 +99,16 @@
                       <a href="#" panel-name="suite-1.4.6_version_test_resport_" class="show-methods passed suite-1.4.6_version_test_resport_"> (show)</a> <!-- show-methods passed suite-1.4.6_version_test_resport_ -->
                     </span>
                     <div class="method-list-content passed suite-1.4.6_version_test_resport_">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-1.4.6_version_test_resport_" title="xiaqiu.LaunchXiaqiuTest" hash-for-method="baseInfo_test">baseInfo_test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-1.4.6_version_test_resport_" title="xiaqiu.LaunchXiaqiuTest" hash-for-method="indexPage_test">indexPage_test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-1.4.6_version_test_resport_" title="xiaqiu.LaunchXiaqiuTest" hash-for-method="login_test">login_test</a> <!-- method navigator-link -->
@@ -124,6 +134,20 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="baseInfo_test">
+                  </a> <!-- baseInfo_test -->
+                  <span class="method-name">baseInfo_test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="indexPage_test">
+                  </a> <!-- indexPage_test -->
+                  <span class="method-name">indexPage_test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="login_test">
                   </a> <!-- login_test -->
                   <span class="method-name">login_test</span>
@@ -146,7 +170,8 @@
       &lt;class name=&quot;xiaqiu.LaunchXiaqiuTest&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;login_test&quot;/&gt;
-          &lt;exclude name=&quot;indexPage_test&quot;/&gt;
+          &lt;include name=&quot;indexPage_test&quot;/&gt;
+          &lt;include name=&quot;baseInfo_test&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- xiaqiu.LaunchXiaqiuTest --&gt;
     &lt;/classes&gt;
@@ -188,16 +213,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'login_test')
+data.setCell(0, 1, 'baseInfo_test')
 data.setCell(0, 2, 'xiaqiu.LaunchXiaqiuTest')
-data.setCell(0, 3, 20196);
+data.setCell(0, 3, 43454);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'indexPage_test')
+data.setCell(1, 2, 'xiaqiu.LaunchXiaqiuTest')
+data.setCell(1, 3, 26591);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'login_test')
+data.setCell(2, 2, 'xiaqiu.LaunchXiaqiuTest')
+data.setCell(2, 3, 11616);
 window.suiteTableData['1.4.6_version_test_resport_']= { tableData: data, tableDiv: 'times-div-1.4.6_version_test_resport_'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 20 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-1.4.6_version_test_resport_">
               </div> <!-- times-div-1.4.6_version_test_resport_ -->
             </div> <!-- times-div -->
@@ -212,15 +245,13 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-1.4.6_version_test_resport_" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">xiaqiu.LaunchXiaqiuTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">indexPage_test</span>
-                <br/>
-                <span class="ignored-method-name">baseInfo_test</span>
+                <span class="ignored-method-name">bankInfo_test</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -239,11 +270,19 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">login_test</span>
-                <span class="method-start">29966 ms</span>
+                <span class="method-start">62763 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">indexPage_test</span>
+                <span class="method-start">74380 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">baseInfo_test</span>
+                <span class="method-start">100972 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownAfterClass</span>
-                <span class="method-start">50163 ms</span>
+                <span class="method-start">144427 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

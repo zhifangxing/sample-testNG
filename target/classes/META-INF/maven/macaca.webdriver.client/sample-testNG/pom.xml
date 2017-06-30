@@ -33,9 +33,9 @@
                     <source>1.8</source>  <!--源代码编译版本和目标平台编译版本，不写也可。-->
                     <target>1.8</target>
                     <suiteXmlFiles>
-                        <suiteXmlFile>/res/testng.xml</suiteXmlFile>
+                        <suiteXmlFile>res/testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
-                   <!--  <properties>
+                    <properties>
                         <property>
                             <name>usedefaultlisteners</name>
                             <value>false</value>
@@ -44,10 +44,10 @@
                             <name>listener</name>
                             <value>org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter</value>
                         </property>
-                    </properties> -->
-                    <!-- <workingDirectory>target/</workingDirectory> 报告生成之后会在maven项目的target路径下面，打开index.html就可以查看
-                    <forkMode>once</forkMode>生成规则
-                    <argLine>-Dfile.encoding=UTF-8</argLine> -->
+                    </properties>
+                    <workingDirectory>target/</workingDirectory> <!--报告生成之后会在maven项目的target路径下面，打开index.html就可以查看-->
+                    <forkMode>once</forkMode><!--生成规则-->
+                    <argLine>-Dfile.encoding=UTF-8</argLine>
                 </configuration>
             </plugin>
 		
@@ -86,13 +86,13 @@
 			<version>1.2.17</version>
 		</dependency>
 		
-		 
+		<!--  
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 		</dependency>
-		 
+		-->
 		
 		<!--把官方的junit换成testng-->  
 		<dependency>

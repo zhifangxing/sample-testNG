@@ -15,6 +15,7 @@ import com.alibaba.fastjson.JSONObject;
 import macaca.client.MacacaClient;
 import macaca.client.commands.Element;
 import macaca.client.common.ElementSelector;
+import macaca.client.common.Keycode;
 
 public class LaunchXiaqiuTest {
 	
@@ -28,7 +29,7 @@ public class LaunchXiaqiuTest {
       */
      JSONObject porps = new JSONObject();
      porps.put("platformName", "android");
-     porps.put("app", "/Users/zhifang.xing/xiaqiu_v1.4.6_test.apk");
+     porps.put("app", "/Users/zhifang.xing/xiaqiu_v1.4.7_test.apk");
      porps.put("reuse", 1);
 //     porps.put("deviceName","L7T4O7UW99999999");
 //     porps.put("autoAcceptAlerts", true);
@@ -37,7 +38,7 @@ public class LaunchXiaqiuTest {
      desiredCapabilities.put("desiredCapabilities", porps);
      driver.initDriver(desiredCapabilities);
      
-     JSONObject dragJson = JSONObject.parseObject("{fromX:700,fromY:300,toX:10,toY:100,steps:5}");
+     JSONObject dragJson = JSONObject.parseObject("{fromX:700,fromY:300,toX:10,toY:100,duration:0.2}");
      String startAction = "drag";
      driver.touch(startAction, dragJson)
      .sleep(1000)
@@ -75,7 +76,9 @@ public class LaunchXiaqiuTest {
 	public void indexPage_test() throws Exception{
 		
 		System.err.println("------------#2 indexPage test-------------------");
+		driver.drag(700,300,700,10,2,5);
 		ElementSelector selector = driver.elementsByClassName("android.widget.Button");
+		driver.sleep(10000);
 		driver.elementByXPath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.RelativeLayout[1]/android.support.v4.view.ViewPager[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[15]/android.view.View[1]/android.widget.Button[1]").click();
 		driver.sleep(5000);
 		
@@ -87,16 +90,25 @@ public class LaunchXiaqiuTest {
 	    driver.sleep(10000);
 //	    定位到真实姓名输入框
 	    ElementSelector selector = driver.elementsByClassName("android.widget.EditText");
-	    String username = "邢志芳";
-	    driver.elementByXPath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[3]/android.widget.EditText[1]")
-	    .sendKeys(username);
-//	    定位到身份证号输入框
-	    String pwd = "411122";
-	    driver.elementByXPath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[4]/android.widget.EditText[1]")
-	    .sendKeys(pwd+"1987"+"08054643");
 	    driver.sleep(3000);
+	    String username = "邢志芳";
+	    driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[3]/android.widget.EditText[1]").sendKeys(username);
+//	    定位到身份证号输入框
+//	    String pwd = "411122";
+	     
+//	    JSONObject porps = new JSONObject();
+//	    porps.put("IDNumber", "411122198708054643");
+//	    System.err.println(porps.getString("IDNumber"));
+	    driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[4]/android.widget.EditText[1]").sendKeys("411122198708054643");
+//	    .sendKeys(porps.getString("IDNumber").toString());
+//	    driver.keys(porps.getString("IDNumber").toString());
+	   
+//	    .sendKeys(pwd+"198708"+"054643");
+	    
+	    driver.sleep(5000);
 //	    定位到身份证件
 	    selector = driver.elementsByClassName("android.view.View");
+	    driver.sleep(2000);
 	    driver.elementByXPath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[5]/android.view.View[2]")
 	    .click();
 	    driver.sleep(3000);
@@ -106,25 +118,29 @@ public class LaunchXiaqiuTest {
 	    .click();
 	    
 //	    parseObject("{fromX:700,fromY:300,toX:10,toY:100,steps:5}");
-	    driver.drag(700,300,700,10,2,5);
-	   
+	    driver.drag(700,300,700,10,2,1);
+	    driver.sleep(5000);
 	    
 //	    下一步按钮高亮，定位并点击进入下个页面
 	    selector =  driver.elementsByClassName("android.widget.Button");
+	    driver.sleep(5000);
 	    driver.elementByXPath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[10]/android.widget.Button[1]")
 	    .click();
 	}
 	
+	@Test
 	public void bankInfo_test() throws Exception{
 
 //		进入银行卡信息页面
         System.err.println("------------#4 bankinfo test-------------------");
+        driver.sleep(10000);
         ElementSelector selector = driver.elementsByClassName("android.view.View");
         driver.elementByXPath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[4]")
         .click();
         
 //        出现银行选择框
         selector = driver.elementsByClassName("android.widget.LinearLayout");
+        driver.sleep(2000);
 //        选择民生银行
         driver.elementByXPath("//android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[6]")
         .click();
@@ -141,6 +157,7 @@ public class LaunchXiaqiuTest {
         selector = driver.elementsByClassName("android.view.View");
         driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[8]")
         .click();
+        driver.sleep(3000);
 //        下一步按钮高亮，点击进入完善信息页面
         selector = driver.elementsByClassName("android.widget.Button");
         driver.elementByXPath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[13]/")
